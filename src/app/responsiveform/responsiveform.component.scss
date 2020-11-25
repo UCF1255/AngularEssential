@@ -1,0 +1,88 @@
+.responsiveform-container {
+  padding: 20px 20px 20px 20px;
+  background-color: #f7f7f7;
+
+  .form-header-section {
+    text-align: center;
+    color: orange;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 16px;
+    width: 100%;
+
+    .left-section,
+    .right-section {
+      .main-div {
+        input[type="text"],
+        input[type="password"] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 2px solid #ccc;
+          box-sizing: border-box;
+        }
+
+        .label-class {
+          display: block;
+        }
+      }
+    }
+
+    button {
+      background-color: #009688;
+      color: white;
+      padding: 15px 20px;
+      margin: 8px 0;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .cancelbtn {
+      padding: 15px 20px;
+      background-color: #424242;
+    }
+
+    .cancelbtn,
+    .signupbtn {
+      width: 100%;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    @media screen and (min-width: 768px) {
+      .cancelbtn,
+      .signupbtn {
+        float: right;
+        width: 18%;
+      }
+
+      .left-section,
+      .right-section {
+        width: 50%;
+        display: inline-block;
+        .main-div {
+          input[type="text"],
+          input[type="password"] {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 999px) {
+      .cancelbtn,
+      .signupbtn {
+        width: 12%;
+      }
+    }
+  }
+}

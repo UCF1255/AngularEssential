@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "UCF"
+    }
+  },
+  "defaultProject": "UCF",
+  "cli": {
+    "analytics": "c508a60f-4fb2-4592-a249-12e1d1445cd0"
+  }
 }
