@@ -15,6 +15,8 @@ import { Comp2Component } from './subjects/comp2/comp2.component';
 import { Comp3Component } from './subjects/comp3/comp3.component';
 import { Comp4Component } from './subjects/comp4/comp4.component';
 import { ResponsiveformComponent } from './responsiveform/responsiveform.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ResponsiveformComponent } from './responsiveform/responsiveform.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

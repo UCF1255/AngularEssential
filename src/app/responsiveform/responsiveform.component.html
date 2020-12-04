@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <input type="checkbox" checked="checked" /> Remember me
+      <input type="checkbox" /> Remember me
       <p>
         To create an account you have to agree our
         <a href="#">Terms & Privacy</a>.
@@ -48,4 +48,75 @@
       </div>
     </div>
   </form>
+  <hr />
+  <h5>Table with multiple row & checkbox selection associated with it</h5>
+  <table style="width: 100%">
+    <tr>
+      <th>Checkbox</th>
+      <th>Name</th>
+      <th>Code</th>
+    </tr>
+    <tr *ngFor="let item of checkBoxData">
+      <td>
+        <input
+          type="checkbox"
+          id="vehicle1"
+          name="vehicle1"
+          value="Bike"
+          [checked]="isCheckBoxCheck"
+          (click)="toggleCheckbox($event, item)"
+        />&nbsp;<label for="vehicle1"> checkbox</label>
+      </td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.code }}</td>
+    </tr>
+  </table>
+  <h5>Temperature Conversion</h5>
+  <div class="temperatureConversion">
+    <label for="ftemp">Fahrenheit</label>
+    <input
+      type="number"
+      name="ftemp"
+      id="ftemp"
+      #ftemp
+      (keyup)="tempConversion(ftemp.value, 'F')"
+      [(ngModel)]="fTemperature"
+    />
+    <label for="ctemp">Celsius</label>
+    <input
+      type="number"
+      name="ctemp"
+      id="ctemp"
+      #ctemp
+      (keyup)="tempConversion(ctemp.value, 'C')"
+      [(ngModel)]="cTemperature"
+    />
+  </div>
+  <hr />
+  <h5>Random image will be shown below on reload of a page!!!</h5>
+  <div class="main-dg-container">
+    <div
+      id="dog-container"
+      style="background-image: url({{ srcImageUrl }})"
+    ></div>
+  </div>
+  <hr />
+  <h5>Show the filterd list based in enered input</h5>
+  <input
+    type="text"
+    #searchText
+    (blur)="checkGenreBasedOnsearchText(searchText.value)"
+  />
+  <br />
+  <br />
+  <div class="moviesContainer">
+    <div class="movieSection" *ngFor="let item of moviesData">
+      <figure>
+        <span>{{ item.title }}</span>
+        <figcaption>
+          {{ item.genre[0] }} {{ item.genre[1] }} {{ item.genre[2] }}
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 </div>

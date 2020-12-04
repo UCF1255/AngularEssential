@@ -85,4 +85,33 @@
       }
     }
   }
+
+  
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+  .main-dg-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    #dog-container {
+      height: 700px;
+      width: 900px; 
+      border: 1px solid black;
+    }
+  }
+  .moviesContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    .movieSection{
+      background-color:dodgerblue;
+      border:1px solid black;
+      width:200px;
+      height:100px;
+    }
+  }
 }
