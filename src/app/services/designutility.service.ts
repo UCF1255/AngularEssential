@@ -4,6 +4,7 @@ import { BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DesignutilityService {
   constructor() { }
   // userName = new Subject<string>();

@@ -1,6 +1,7 @@
 import { DesignutilityService } from 'src/app/services/designutility.service';
 import { Component, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { MainserviceService } from '../services/mainservice.service';
 
 @Component({
   selector: 'app-replaysubject',
@@ -20,10 +21,9 @@ export class ReplaysubjectComponent implements OnInit {
   sub2: Subscription;
   sub3: Subscription;
   int: Subscription;
-
   methodInterval = false;
 
-  constructor(private designUtilityService: DesignutilityService) {}
+  constructor(private designUtilityService: DesignutilityService, public mainService: MainserviceService) {}
 
   ngOnInit(): void {
     this.designUtilityService.videoEmit.subscribe((res) => {
