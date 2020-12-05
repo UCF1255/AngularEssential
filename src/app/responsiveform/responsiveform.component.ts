@@ -52,6 +52,20 @@ export class ResponsiveformComponent implements OnInit {
     this.serviceWithoutDecorator();
     const array = [12, 12, 24, 24, 36, 36, 1, 2, 3, 2, 24, 12];
     this.findSecondLargestElement(array, array.length);
+    const arr1 = [2, 4, 6, 7];
+    const arr2 = [1, 3, 5, 7];
+    const commonArr = this.commonElementsIn2GivenArray(arr1, arr2);
+    console.log(`common Array element in arr1 & arr2 is: ${commonArr}`);
+  }
+
+  commonElementsIn2GivenArray(arr1, arr2): any {
+    const commonArr = [];
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1.includes(arr2[i])) {
+        commonArr.push(arr1[i]);
+      }
+    }
+    return commonArr;
   }
 
   findSecondLargestElement(arr, arrSize): any {
