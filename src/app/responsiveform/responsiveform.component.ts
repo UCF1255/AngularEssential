@@ -56,6 +56,7 @@ export class ResponsiveformComponent implements OnInit {
     const arr2 = [1, 3, 5, 7];
     const commonArr = this.commonElementsIn2GivenArray(arr1, arr2);
     console.log(`common Array element in arr1 & arr2 is: ${commonArr}`);
+    this.fizzBuzz(20);
   }
 
   commonElementsIn2GivenArray(arr1, arr2): any {
@@ -102,6 +103,20 @@ export class ResponsiveformComponent implements OnInit {
     console.log(`W/o inbuilt sort: ${sortedArr}`);
     const distinctArr = this.distinctArrayWithoutInbuilt(arr);
     console.log(`W/o inbuilt duplicay removal: ${distinctArr}`);
+  }
+
+  fizzBuzz(n): any {
+    for (let i = 1; i < n; i++) {
+      if (i % 3 === 0) {
+        console.log('Fizz');
+      } else if (i % 5 === 0) {
+        console.log('Buzz');
+      } else if (i % 15 === 0) {
+        console.log('FizzBuzz');
+      } else {
+        console.log(i);
+      }
+    }
   }
 
   distinctArrayWithoutInbuilt(arr): any {
