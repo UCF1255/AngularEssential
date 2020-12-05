@@ -50,14 +50,39 @@ export class ResponsiveformComponent implements OnInit {
     this.getRandomPictures();
     this.arrayManipulations();
     this.serviceWithoutDecorator();
+    const array = [12, 12, 24, 24, 36, 36, 1, 2, 3, 2, 24, 12];
+    this.findSecondLargestElement(array, array.length);
+  }
+
+  findSecondLargestElement(arr, arrSize): any {
+    let i;
+    /* There should be atleast two elements */
+    if (arrSize < 2) {
+      console.log(`Invalid input`);
+    }
+
+    // sort the array
+    arr.sort((a, b) => a - b); // [1,2,2,3,12,12,12,12,24,24,36,36]
+
+    // start from second last element
+    // as the largest element is at last
+    for (i = arrSize - 2; i >= 0; i--) {
+      // if the element is not
+      // equal to largest element
+      if (arr[i] !== arr[arrSize - 1]) {
+        console.log(`The second largest element is: ${arr[i]}`);
+        return;
+      }
+    }
+    console.log(`There is no second largest element in given array`);
   }
 
   arrayManipulations(): void {
     const arr = [12, 24, 36, 48, 1, 2, 3, 2, 24, 12];
     console.log(`Original Array: ${arr}`);
-    const inbuiltSortedArr = arr.sort((a, b) =>  a - b);
+    const inbuiltSortedArr = arr.sort((a, b) => a - b);
     console.log(`inbuilt sort: ${inbuiltSortedArr}`);
-    console.log(`inbuilt sort DESC: ${arr.sort((a, b) =>  b - a)}`);
+    console.log(`inbuilt sort DESC: ${arr.sort((a, b) => b - a)}`);
     console.log(`inbuilt duplicay removal: ${[...new Set(arr)]}`);
     const sortedArr = this.sortArraywithoutInbuilt(arr);
     console.log(`W/o inbuilt sort: ${sortedArr}`);
@@ -73,18 +98,18 @@ export class ResponsiveformComponent implements OnInit {
   }
 
   sortArraywithoutInbuilt(arr): any {
-      let n = arr.length;
-      while (n !== 0) {
-        for (let i = 1; i < arr.length; i++) {
-          if (arr[i] < arr[i - 1]) {
-            const save = arr[i];
-            arr[i] = arr[i - 1];
-            arr[i - 1] = save;
-          }
+    let n = arr.length;
+    while (n !== 0) {
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < arr[i - 1]) {
+          const save = arr[i];
+          arr[i] = arr[i - 1];
+          arr[i - 1] = save;
         }
-        n--;
       }
-      return arr;
+      n--;
+    }
+    return arr;
   }
 
   serviceWithoutDecorator(): void {
