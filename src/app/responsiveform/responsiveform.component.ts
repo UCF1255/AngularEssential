@@ -16,6 +16,7 @@ export class ResponsiveformComponent implements OnInit {
   cTemperature;
   fTemperature;
   movieArr = [];
+  forLoopArr=[];
   constructor(
     public http: HttpClient,
     private mainService: MainserviceService
@@ -57,6 +58,30 @@ export class ResponsiveformComponent implements OnInit {
     const commonArr = this.commonElementsIn2GivenArray(arr1, arr2);
     console.log(`common Array element in arr1 & arr2 is: ${commonArr}`);
     this.fizzBuzz(20);
+
+    this.forLoopArr=[
+    {
+     'name':'Nisha',
+     'salary':12345
+    },
+    {
+      'name':'Nikita',
+      'salary':765890
+    },
+    {
+      'name':'Satish',
+      'salary':9987654
+    },
+    {
+      'name':'Roshani',
+      'salary':67890
+    }
+    ]
+  }
+
+  trackByFuntion(index, item) {
+    console.log(index,item);
+    return index;
   }
 
   commonElementsIn2GivenArray(arr1, arr2): any {
@@ -117,6 +142,27 @@ export class ResponsiveformComponent implements OnInit {
         console.log(i);
       }
     }
+  }
+
+  refreshNames(){
+    this.forLoopArr=[
+      {
+       'name':'Nisha',
+       'salary':12345
+      },
+      {
+        'name':'Nikita',
+        'salary':765890
+      },
+      {
+        'name':'Satish',
+        'salary':9987654
+      },
+      {
+        'name':'Roshani',
+        'salary':67890
+      }
+      ]
   }
 
   distinctArrayWithoutInbuilt(arr): any {

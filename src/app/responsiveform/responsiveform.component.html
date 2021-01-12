@@ -119,4 +119,12 @@
       </figure>
     </div>
   </div>
+  <br />
+  <br />
+  <h5>Iteration over forLoopArray</h5>
+  <div class="forLoopPerformanceIssues">
+    <p *ngFor="let item of forLoopArr; trackBy: trackByFuntion">{{item.name}}</p>
+  </div>
+ 
+  <button (click)="refreshNames()">Refresh</button>
 </div>
