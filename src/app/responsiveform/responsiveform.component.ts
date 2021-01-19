@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ResponsiveformComponent implements OnInit {
   isCheckBoxCheck = true;
+  responsiveFormData;
   checkBoxData = [];
   srcImageUrl;
   moviesData = [];
@@ -45,6 +46,7 @@ export class ResponsiveformComponent implements OnInit {
         genre: ['Action', 'Adventures'],
       },
     ];
+    this.responsiveFormData="BHAVANA INGLE";
     this.movieArr = this.moviesData;
     this.fTemperature = 32;
     this.cTemperature = 0;

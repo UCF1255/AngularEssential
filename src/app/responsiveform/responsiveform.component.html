@@ -121,10 +121,15 @@
   </div>
   <br />
   <br />
-  <h5>Iteration over forLoopArray</h5>
+  <h5>For loop performance issue (Iteration over forLoopArray using trackby)</h5>
   <div class="forLoopPerformanceIssues">
     <p *ngFor="let item of forLoopArr; trackBy: trackByFuntion">{{item.name}}</p>
   </div>
  
   <button (click)="refreshNames()">Refresh</button>
+</div>
+
+<div>
+  <h5> Custom Pipe Implementations</h5>
+  <h3>{{responsiveFormData | Demo}} </h3>
 </div>

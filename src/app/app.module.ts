@@ -17,6 +17,8 @@ import { Comp4Component } from './subjects/comp4/comp4.component';
 import { ResponsiveformComponent } from './responsiveform/responsiveform.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { Demo} from './Pipes/demo.pipe';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     Comp3Component,
     Comp4Component,
     ResponsiveformComponent,
+    Demo,
   ],
   imports: [
     BrowserModule,
